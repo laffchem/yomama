@@ -1,0 +1,94 @@
+{% extends 'base.html' %}{% block title %}API Documentation{% endblock title %}
+{% block content %}
+<div class="container">
+    <h1 class="text-center mt-5">Yo Mama! API Docs</h1>
+    <div class="container">
+        <p class="description-text text-wrap mx-auto mt-5 mb-5">
+            Why was this project needed? Honestly it wasn't, but I had a ton of fun making it, and I really hope you
+            enjoy using it. This API doesn't require authentication to use, but please be reasonable with usage.
+            All requests will return a json response based on the parameters you have passed to the server.
+        </p>
+
+
+        <!--API Docs-->
+        <div class="row">
+            <div class="col-lg-4 api-docs">
+                <div id="api-list" class="list-group">
+                    <a class="p-2 rounded" href="#get-joke">Get Random Joke</a>
+                    <a class="p-2 rounded" href="#get-joke-category">Get Joke by
+                        Category</a>
+                    <a class="p-2 rounded" href="#get-jokes-category">Get Joke List by
+                        Category</a>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div data-bs-spy="scroll" data-bs-target="#api-list" data-bs-smooth-scroll="true"
+                     class="scrollspy" tabindex="0">
+                    <div class="api-item">
+                        <h4 class="mb-3" id="get-joke">Random Joke</h4>
+                        <div class="white-bg">
+                            <p>To retrieve a random joke from the server, you need to perform a get request to the
+                                following endpoint.</p>
+                            <strong><p>curl -X 'GET' \
+                                'http://127.0.0.1:8000/api/v1/jokes/random/' \
+                                -H 'accept: application/json'</p></strong>
+                            <strong><p>/api/v1/jokes/random/</p></strong>
+                            <p>The response will contain an id, joke, and category.</p>
+                            <strong><p>{
+                                "id": 0,
+                                "joke": "string",
+                                "category": "string"
+                                }</p></strong>
+                            <p>You can then use the id in the joke by id endpoint to get a specific joke.</p>
+                        </div>
+                    </div>
+                    <div class="api-item">
+                        <h4 class="mb-3" id="get-joke-category">Joke by Category</h4>
+                        <div class="white-bg">
+                            <p>To retrieve a random joke by category from the server, you need to perform a get request to the
+                                following endpoint with a category.</p>
+                            <strong><p>curl -X 'GET' \
+                                'http://127.0.0.1:8000/api/v1/jokes/category/random/' \
+                                -H 'accept: application/json'</p></strong>
+                            <strong><p>/api/v1/jokes/category/random/</p></strong>
+                            <p>
+                                The categories available are "fat", "stupid", "ugly", "nasty", "hairy", "bald", "old", "poor", "short", "skinny", "tall", or "like".
+                                Anything else will return a 404 not found error.
+                            </p>
+                            <p>The response will contain an id, joke, and category.</p>
+                            <strong><p>{
+                                "id": 0,
+                                "joke": "string",
+                                "category": "string"
+                                }</p></strong>
+                            <p>You can then use the id in the joke by id endpoint to get a specific joke.</p>
+                        </div>
+                    </div>
+                    <div class="api-item">
+                        <h4 class="mb-3" id="get-jokes-category">Joke List by Category</h4>
+                        <div class="white-bg">
+                            <p>To retrieve a random joke list by category from the server, you need to perform a get request to the
+                                following endpoint with a category.</p>
+                            <strong><p>curl -X 'GET' \
+                                'http://127.0.0.1:8000/api/v1/jokes/category/' \
+                                -H 'accept: application/json'</p></strong>
+                            <strong><p>/api/v1/jokes/category/</p></strong>
+                            <p>The response an array of jokes that all contain an id, joke, and category.</p>
+                            <strong><p>[{
+                                "id": 0,
+                                "joke": "string",
+                                "category": "string"
+                                }, ...
+                            ]</p></strong>
+                            <p>You can then use any of the ids in the joke by id endpoint to get a specific joke.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock content %}

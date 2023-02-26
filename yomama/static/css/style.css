@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #e7e7e7;
+    color: #333;
+    position: relative;
+}
+
+.joke-box {
+    background-color: #f8f9fa;
+}
+
+
+.btn-custom {
+    background-color: #38d9a9;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.btn-custom:active,
+.btn-custom:hover {
+    background-color: #12b886;
+    color: #e7e7e7;
+
+}
+
+.joke {
+    line-height: 1.6;
+}
+
+.img-logo {
+    width: 30%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 4rem;
+}
+
+/* CARDS */
+.card-img-top {
+    height: 16rem;
+}
+
+/* Heading */
+
+/* NAVBAR */
+
+.navbar {
+    background-color: #38d9a9 !important;
+}
+
+.colors {
+    color: #333;
+    transition: all 0.3s;
+}
+
+.colors:hover,
+.colors:active {
+    color: #e7e7e7;
+
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+
+.heading-primary {
+    font-size: 5rem;
+}
+
+.heading-secondary {
+    font-family: 'Sacramento', cursive;
+    font-weight: 400;
+    font-size: 4rem;
+}
+
+.heading-projects {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.heading-sections {
+    font-size: 3.6rem;
+    font-weight: 400;
+}
+
+.heading-sections::after {
+    content: '';
+    padding: 0.8rem;
+    border-bottom: 2px dashed #333;
+    display: flex;
+    max-width: 8rem;
+    margin: 0 auto;
+}
+
+/* HOME PAGE */
+
+.description-text {
+    font-size: 1.4rem;
+}
+
+.underlined {
+    text-decoration: underline;
+    font-weight: 400;
+    text-decoration-thickness: 3px;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #38d9a9;
+    color: #333;
+}
+
+.email {
+    text-decoration: none;
+    color: #333;
+}
+
+.email:active,
+.email:hover {
+    color: #e7e7e7;
+}
+
+.copyright {
+    font-size: 1rem;
+}
+
+.icons,
+.icons:link {
+    font-size: 2rem;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.icons:hover,
+.icons:active {
+    color: #e7e7e7;
+
+}
+
+/* Skills List */
+.list-text {
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.resume-text {
+    font-size: 1rem;
+}
+
+.bold-text {
+    font-weight: 700;
+}
+
+.italic-text {
+    font-style: italic;
+}
+
+.list-group {
+  position: sticky;
+  top: 4rem;
+  z-index: 1;
+}
+
+.list-group-item {
+    background-color: #edf2ff;
+}
+
+.list-group-item.active,
+.list-group-item:hover,
+.list-group-item:active {
+    background-color: #38d9a9 !important;
+    color: #777 !important;
+}
+
+.api-docs a {
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.api-item {
+    margin-bottom: 10rem;
+}
+
+h4 {
+    text-align: center;
+}
+
+
+
+.white-bg {
+    background-color: #edf2ff;
+    padding: 1.4rem;
+    border-radius: 1rem;
+}
+@media (max-width: 62rem) {
+    .img-logo {
+        width: 50%;
+    }
+}
+
+@media (max-width: 25rem) {
+    .heading-projects {
+        font-size: 3rem;
+    }
+
+    .heading-primary {
+        font-size: 3.6rem;
+    }
+
+    .heading-secondary {
+        font-size: 3rem;
+    }
+
+    .heading-sections {
+        font-size: 3rem;
+    }
+
+    .description-text {
+        font-size: 1.2rem;
+    }
+
+    .objective {
+        font-size: 1rem;
+    }
+
+    .card-marg {
+        margin-bottom: 3rem !important;
+    }
+
+    .w-50 {
+        width: 75% !important;
+    }
+}

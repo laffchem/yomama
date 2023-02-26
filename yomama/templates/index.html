@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <h1 class="mt-5 mb-2 text-center">Random Yo Mama Joke</h1>
+    <div class="joke-div text-center mx-auto mt-5">
+        <div class="joke-box p-5 m-5 rounded">
+            <div class="p-2">
+                <p class="description-text"><strong>Joke</strong></p>
+            </div>
+            <div class="description-text">
+                <p id="result" class="p-3 text-center"></p>
+            </div>
+        </div>
+        <div class="mb-5">
+            <form action="" method="post">
+                {% csrf_token %}
+                <label for="joke-type" class="form-label">Joke Categories</label>
+                <select id="joke-type" name="joke-category"
+                        class="form-select form-select-lg mt-3">
+                    {% for category in context %}
+                    <option value="{{ category }}">{{ category }}</option>
+                    {% endfor %}
+                </select>
+                <a hx-get="/htmx/random_joke" hx-target="#result" class="btn btn-custom mt-5">Random Joke</a>
+                <a hx-post="/htmx/random_joke_category/" hx-target="#result" class="btn btn-custom mt-5">Random Joke
+                    By Category</a>
+            </form>
+        </div>
+    </div>
+</div>
+{% block footer %}{% include 'footer.html' %}{% endblock footer %}
+{% endblock content %}
